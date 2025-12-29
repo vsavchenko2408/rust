@@ -1,11 +1,12 @@
-use std::io;
+//use std::io;
 
 fn main()
 {
-    let mut x = [5,3,6,2,8];
-   // x.push(9);
-   // x.push(4);
+    let x = [5,3,6,2,8];
+
     for n in x{
-    println!(" {:?}", n);
+        if n %2 == 0{
+    print!(" { }", n);
+        }
     }
 }
