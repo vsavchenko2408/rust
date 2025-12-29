@@ -2,11 +2,19 @@
 
 fn main()
 {
-    let x = [5,3,6,2,8];
+    let mut x = 15;
 
-    for n in x{
-        if n %2 == 0{
-    print!(" { }", n);
-        }
-    }
+    foo(&mut x);
+    show(x);
+
+}
+
+fn foo(x :&mut i32)
+{
+    *x = *x * 10;
+}
+
+fn show(x: i32)
+{
+    println!("Result: {}", x);
 }
