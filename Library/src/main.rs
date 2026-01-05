@@ -27,12 +27,17 @@ input
 fn main()
 {
     let mut bk = Book::new();
+    /* 
     bk.create_book(); 
     bk.show_info();
     bk.order_book();
     bk.show_info();
     bk.back_book();
     bk.show_info();
+    */
+    let mut books: Vec<Book> = Vec::new();
+    books.push(bk);
+    
 }
 
 
