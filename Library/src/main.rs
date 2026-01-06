@@ -24,19 +24,22 @@ fn readstr() -> String
 input
 }
 
-fn main()
+fn create_book() -> Book
 {
     let mut bk = Book::new();
-    /* 
-    bk.create_book(); 
-    bk.show_info();
-    bk.order_book();
-    bk.show_info();
-    bk.back_book();
-    bk.show_info();
-    */
-    let mut books: Vec<Book> = Vec::new();
-    books.push(bk);
+    bk.create_book();
+    bk
+}
+fn main()
+{
+    let mut library: Vec<Book> = Vec::new();
+    library.push(create_book());
+    library.push(create_book());
+    library.push(create_book());
+    for x in library
+    {
+        x.show_info();
+    }
     
 }
 
