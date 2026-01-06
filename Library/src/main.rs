@@ -32,14 +32,7 @@ fn create_book() -> Book
 }
 fn main()
 {
-    let mut library: Vec<Book> = Vec::new();
-    library.push(create_book());
-    library.push(create_book());
-    library.push(create_book());
-    for x in library
-    {
-        x.show_info();
-    }
+
     
 }
 
@@ -93,5 +86,26 @@ impl Book
     {
         self.is_free = true;
         self
+    }
+}
+
+struct Library
+{
+    name: String,
+    list_of_books: Vec<Book>
+}
+
+impl Library
+{
+    fn new() ->Library
+    {
+        Library{
+        name: String::new(),
+        list_of_books: Vec::new()
+        }
+    }
+    fn add_book()
+    {
+        
     }
 }
