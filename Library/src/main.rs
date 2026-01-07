@@ -32,6 +32,10 @@ fn create_book() -> Book
 }
 fn main()
 {
+ let mut lb: Library =  Library::new();
+    lb.add_book();
+    lb.add_book();
+    lb.show_all();
 
     
 }
@@ -99,13 +103,22 @@ impl Library
 {
     fn new() ->Library
     {
+        let mut library_name: String = readstr();
         Library{
-        name: String::new(),
+        name: library_name,
         list_of_books: Vec::new()
         }
     }
-    fn add_book()
+    fn add_book(&mut self) -> &Library
     {
-        
+        self.list_of_books.push(Book::new());
+        self
+    }
+    fn show_all(&self)
+    {
+        for x in &self.list_of_books
+        {
+            x.show_info();
+        }
     }
 }
